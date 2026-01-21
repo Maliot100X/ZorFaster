@@ -108,10 +108,12 @@ export default function Home() {
                     <div className="aspect-square bg-warp-bg relative">
                          {/* Use Zora NFT Preview for robust media handling */}
                         <div className="w-full h-full [&>div]:w-full [&>div]:h-full [&_img]:object-cover">
+                            {/* @ts-ignore */}
                             <NFTPreview
                                 contract={mint.contract.id}
                                 id={mint.tokenId}
-                                networkId={Networks.BASE_MAINNET}
+                                // Use direct Chain ID for Base (8453) to bypass strict enum check
+                                networkId="8453" 
                                 showBorders={false}
                             />
                         </div>
