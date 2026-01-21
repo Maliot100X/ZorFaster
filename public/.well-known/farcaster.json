@@ -1,0 +1,16 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOiAzN...",
+    "payload": "eyJkb21haW4iOiA...",
+    "signature": "MHgyY..."
+  },
+  "frame": {
+    "version": "1",
+    "name": "ZorFaster",
+    "iconUrl": "https://zorfaster.vercel.app/icon.png",
+    "homeUrl": "https://zorfaster.vercel.app",
+    "splashImageUrl": "https://zorfaster.vercel.app/splash.png",
+    "splashBackgroundColor": "#17101F",
+    "webhookUrl": "https://zorfaster.vercel.app/api/webhook"
+  }
+}
