@@ -111,8 +111,6 @@ export default function Home() {
                             <NFTPreview
                                 contract={mint.contract.id}
                                 id={mint.tokenId}
-                                // Use direct Chain ID for Base (8453) to bypass strict enum check
-                                networkId="8453" 
                                 showBorders={false}
                             />
                         </div>
