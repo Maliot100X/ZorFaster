@@ -4,10 +4,6 @@ import sdk from '@farcaster/frame-sdk';
 import { createWalletClient, custom, createPublicClient, http, parseEther } from 'viem';
 import { base } from 'viem/chains';
 import { createCreatorClient } from '@zoralabs/protocol-sdk';
-import { NFTPreview } from "@zoralabs/nft-components";
-
-// @ts-ignore
-const PREVIEW_CONTRACT = "0x8762DB106B2c2A0bccB3A80d1Ed41273552616E8"; // Base Zora 1155 Example
 
 export default function Launch() {
   const [name, setName] = useState('');
