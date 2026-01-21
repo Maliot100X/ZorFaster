@@ -19,12 +19,16 @@ export function Layout() {
   }, []);
 
   if (!isSDKLoaded) {
-    return <div className="min-h-screen bg-black text-white flex items-center justify-center">Loading...</div>;
+    return (
+        <div className="min-h-screen bg-[#000000] text-white flex items-center justify-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-purple-500"></div>
+        </div>
+    );
   }
 
   return (
-    <div className="min-h-screen bg-black text-white pb-20 font-sans">
-      <main className="px-4 pt-4">
+    <div className="min-h-screen bg-[#000000] text-white pb-[80px] font-sans overflow-x-hidden selection:bg-purple-500/30">
+      <main className="px-4 pt-4 max-w-md mx-auto">
         <Outlet />
       </main>
       <BottomNav />
