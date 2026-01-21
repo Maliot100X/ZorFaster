@@ -4,7 +4,6 @@ import { clsx } from 'clsx';
 import { Link as RouterLink } from 'react-router-dom';
 import { fetchRecentMints, type ZoraToken } from '../lib/zora';
 import { NFTPreview } from "@zoralabs/nft-components";
-import { Networks } from "@zoralabs/nft-hooks";
 
 function LinkButton({ to, className, children }: { to: string, className?: string, children: React.ReactNode }) {
     return (
