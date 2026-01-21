@@ -7,9 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brand-primary': '#0052FF', // Base Blue
-        'brand-secondary': '#111111',
-        'zora-blue': '#0000FF',
+        'warp-bg': '#17101F',
+        'warp-surface': '#201A2D',
+        'warp-border': '#36294E',
+        'warp-active': '#855DCD',
+        'warp-text': '#FFFFFF',
+        'warp-text-muted': '#9FA0A5',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

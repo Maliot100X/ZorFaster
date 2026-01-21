@@ -20,14 +20,14 @@ export function Layout() {
 
   if (!isSDKLoaded) {
     return (
-        <div className="min-h-screen bg-[#000000] text-white flex items-center justify-center">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-purple-500"></div>
+        <div className="min-h-screen bg-warp-bg text-warp-text flex items-center justify-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-warp-active"></div>
         </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#000000] text-white pb-[80px] font-sans overflow-x-hidden selection:bg-purple-500/30">
+    <div className="min-h-screen bg-warp-bg text-warp-text pb-[80px] font-sans overflow-x-hidden selection:bg-warp-active/30">
       <main className="px-4 pt-4 max-w-md mx-auto">
         <Outlet />
       </main>
