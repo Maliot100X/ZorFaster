@@ -107,6 +107,7 @@ export default function Home() {
                     <div className="aspect-square bg-warp-bg relative">
                          {/* Use Zora NFT Preview for robust media handling */}
                         <div className="w-full h-full [&>div]:w-full [&>div]:h-full [&_img]:object-cover">
+                            {/* @ts-ignore */}
                             <NFTPreview
                                 contract={mint.contract.id}
                                 id={mint.tokenId}
