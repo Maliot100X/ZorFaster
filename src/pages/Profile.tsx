@@ -1,20 +1,14 @@
 import { useEffect, useState } from 'react';
-import sdk from '@farcaster/frame-sdk';
-import { type FrameContext } from '@farcaster/frame-sdk';
+import sdk, { type Context } from '@farcaster/frame-sdk';
 
 export default function Profile() {
-  const [context, setContext] = useState<FrameContext>();
-  const [address, setAddress] = useState<string>();
+  // @ts-ignore
+  const [context, setContext] = useState<Context.FrameContext>();
 
   useEffect(() => {
     const load = async () => {
       const context = await sdk.context;
       setContext(context);
-      
-      // Try to get address from context or wallet
-      if (context?.user?.verifiedAddresses?.[0]) {
-        setAddress(context.user.verifiedAddresses[0]);
-      }
     };
     load();
   }, []);
@@ -34,7 +28,8 @@ export default function Profile() {
             {context?.user?.username ? `@${context.user.username}` : 'Guest User'}
           </div>
           <div className="text-xs text-neutral-500 font-mono">
-            {address ? `${address.slice(0, 6)}...${address.slice(-4)}` : 'No Wallet Connected'}
+            {/* Display FID if available since we removed address state */}
+            FID: {context?.user?.fid || 'Unknown'}
           </div>
         </div>
       </div>

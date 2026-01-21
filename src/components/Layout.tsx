@@ -18,6 +18,10 @@ export function Layout() {
     load();
   }, []);
 
+  if (!isSDKLoaded) {
+    return <div className="min-h-screen bg-black text-white flex items-center justify-center">Loading...</div>;
+  }
+
   return (
     <div className="min-h-screen bg-black text-white pb-20 font-sans">
       <main className="px-4 pt-4">

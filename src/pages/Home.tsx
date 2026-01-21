@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Crown, Sparkles, Clock, Rocket } from 'lucide-react';
+import { Crown, Sparkles, Rocket } from 'lucide-react';
 import { clsx } from 'clsx';
 
 const MOCK_TOKENS = [

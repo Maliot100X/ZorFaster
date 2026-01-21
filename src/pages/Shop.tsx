@@ -9,7 +9,7 @@ export default function Shop() {
   const [loading, setLoading] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
-  const buyBoost = async (type: '10min' | '1hour', price: string) => {
+  const buyBoost = async (type: '10min' | '1hour') => {
     setLoading(type);
     setSuccess(null);
     
@@ -69,7 +69,7 @@ export default function Shop() {
       <div className="grid gap-4">
         {/* 10 Min Boost */}
         <button 
-          onClick={() => buyBoost('10min', '5')}
+          onClick={() => buyBoost('10min')}
           disabled={!!loading}
           className="bg-neutral-900 p-4 rounded-xl border border-neutral-800 flex justify-between items-center hover:border-neutral-700 transition-colors w-full text-left"
         >
@@ -84,7 +84,7 @@ export default function Shop() {
 
         {/* 1 Hour Boost */}
         <button 
-          onClick={() => buyBoost('1hour', '15')}
+          onClick={() => buyBoost('1hour')}
           disabled={!!loading}
           className="bg-neutral-900 p-4 rounded-xl border border-neutral-800 flex justify-between items-center relative overflow-hidden w-full text-left hover:border-purple-500/50 transition-colors"
         >

@@ -30,6 +30,7 @@ export default function Launch() {
         transport: http(),
       });
 
+      // @ts-ignore
       const creatorClient = createCreatorClient({ chainId: base.id, publicClient });
       
       const [address] = await walletClient.getAddresses();
@@ -54,6 +55,7 @@ export default function Launch() {
       setStatus('Waiting for Signature...');
 
       // 3. Send Transaction
+      // @ts-ignore
       const hash = await walletClient.sendTransaction({
         ...parameters,
         chain: base,
